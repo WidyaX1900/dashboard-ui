@@ -13,18 +13,21 @@ body {
     <NavBar />
     <div class="row">
         <SideBar />
+        <HomePage />
     </div>
 </template>
 
 <script>
 import SideBar from './components/SideBar.vue'
 import NavBar from './components/NavBar.vue'
+import HomePage from './components/HomePage.vue'
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    SideBar
+    SideBar,
+    HomePage
   }
 }
 </script>

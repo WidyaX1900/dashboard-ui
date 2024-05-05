@@ -25,10 +25,10 @@
 
     ul li {
         transition: background-color .3s;
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
+        padding: 10px 0 10px 8px;
         border-radius: 5px;
+        width: 60%;
+        cursor: pointer;
     }
 
     ul li:hover {
@@ -48,16 +48,28 @@
         </div>
         <ul class="p-0">
             <li>
-                <a href="#">Home</a>
+                <a href="#">
+                    <FontAwesomeIcon icon="fas fa-house" class="me-2" />
+                    Home
+                </a>
             </li>
             <li>
-                <a href="#">Cars</a>
+                <a href="#">
+                    <FontAwesomeIcon icon="fas fa-car" class="me-2" />
+                    Cars
+                </a>
             </li>
             <li>
-                <a href="#">Transaction</a>
+                <a href="#">
+                    <FontAwesomeIcon icon="fas fa-money-bills" class="me-2" />
+                    Transaction
+                </a>
             </li>
             <li>
-                <a href="#">Customers</a>
+                <a href="#">
+                    <FontAwesomeIcon icon="fas fa-people-group" class="me-2" />
+                    Customers
+                </a>
             </li>
         </ul>
     </aside>

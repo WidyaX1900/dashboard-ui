@@ -25,16 +25,8 @@ nav .user-profile {
 
 <template>
   <nav>
-    <div class="input-group mb-3 search-input">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Search something..."
-      />
-      <button class="btn btn-outline-secondary" id="basic-addon2">Search</button>
-    </div>
     <div class="input-group mb-3 user-profile">
-        <small class="me-3">Hi, rangga</small>
+        <small class="me-3">Hi, Rangga</small>
         <img src="../assets/img/user.png" alt="user-profile" width="40px">
     </div>
   </nav>
