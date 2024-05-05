@@ -12,8 +12,9 @@ body {
 <template>
     <NavBar />
     <div class="row">
-        <SideBar />
-        <HomePage />
+        <SideBar @goToPage="moveToPage"/>
+        <HomePage v-if="page == ''"/>
+        <CarPage v-else-if="page == 'cars'"/>
     </div>
 </template>
 
@@ -21,13 +22,27 @@ body {
 import SideBar from './components/SideBar.vue'
 import NavBar from './components/NavBar.vue'
 import HomePage from './components/HomePage.vue'
+import CarPage from './components/CarPage.vue'
 
 export default {
   name: 'App',
   components: {
     NavBar,
     SideBar,
-    HomePage
-  }
+    HomePage,
+    CarPage
+  },
+
+  data() {
+    return {
+      page: ''
+    }
+  },
+  
+  methods: {
+    moveToPage: function (page) {
+      this.page = page;
+    }
+  },
 }
 </script>
