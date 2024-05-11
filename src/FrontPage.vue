@@ -16,6 +16,7 @@ body {
     <HomePage v-if="page == ''" />
     <CarPage v-else-if="page == 'cars'" />
     <TransactionsPage v-else-if="page == 'transactions'" />
+    <LoyalCustomers v-else-if="page == 'customers'" />
   </div>
 </template>
 
@@ -25,6 +26,7 @@ import NavBar from "./components/NavBar.vue";
 import HomePage from "./components/HomePage.vue";
 import CarPage from "./components/CarPage.vue";
 import TransactionsPage from "./components/TransactionsPage.vue";
+import LoyalCustomers from "./components/LoyalCustomers.vue";
 
 export default {
   name: "App",
@@ -34,6 +36,7 @@ export default {
     HomePage,
     CarPage,
     TransactionsPage,
+    LoyalCustomers
   },
 
   data() {

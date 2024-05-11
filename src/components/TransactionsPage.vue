@@ -2,7 +2,7 @@
 
 <template>
   <div class="col-9 page-container">
-    <h5>Transactions</h5>
+    <h5 class="fw-bold">Transactions</h5>
     <div class="ms-2 transaction-container">
       <div class="col-11 bg-light p-3 rounded shadow mb-3">
         <table class="transactions-list">
