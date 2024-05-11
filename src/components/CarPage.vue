@@ -58,7 +58,10 @@
           </tr>
         </tbody>
       </table>
-      <div class="text-center fs-5 fst-italic text-secondary fw-bold" v-else>
+      <div 
+        class="text-center fs-5 fst-italic text-secondary fw-bold opacity-50" 
+        v-else
+      >
         Car not found!
       </div>
     </div>

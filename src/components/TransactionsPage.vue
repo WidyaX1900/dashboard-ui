@@ -88,12 +88,6 @@
             </tr>
           </tbody>
         </table>
-        <div class="text-end">
-          <span class="me-3">Other data:</span>
-          <a href="#" class="me-3 text-decoration-none">1</a>
-          <a href="#" class="me-3 text-decoration-none">2</a>
-          <a href="#" class="me-3 text-decoration-none">3</a>
-        </div>
       </div>
     </div>
   </div>

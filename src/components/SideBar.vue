@@ -34,6 +34,10 @@ ul li {
 ul li:hover {
   background: rgba(105, 186, 247, 0.894);
 }
+
+ul li.active {
+  background: rgba(105, 186, 247, 0.894);
+}
 </style>
 
 <template>
@@ -47,25 +51,25 @@ ul li:hover {
       </div>
     </div>
     <ul class="p-0">
-      <li @click="goToPage('')">
+      <li @click="goToPage('')" :class="page == '' ? 'active' : ''">
         <a href="#">
           <FontAwesomeIcon icon="fas fa-house" class="me-2" />
           Home
         </a>
       </li>
-      <li @click="goToPage('cars')">
+      <li @click="goToPage('cars')" :class="page == 'cars' ? 'active' : ''">
         <a href="#">
           <FontAwesomeIcon icon="fas fa-car" class="me-2" />
           Cars
         </a>
       </li>
-      <li @click="goToPage('transactions')">
+      <li @click="goToPage('transactions')" :class="page == 'transactions' ? 'active' : ''">
         <a href="#">
           <FontAwesomeIcon icon="fas fa-money-bills" class="me-2" />
           Transaction
         </a>
       </li>
-      <li @click="goToPage('customers')">
+      <li @click="goToPage('customers')" :class="page == 'customers' ? 'active' : ''">
         <a href="#">
           <FontAwesomeIcon icon="fas fa-people-group" class="me-2" />
           Customers
@@ -77,9 +81,16 @@ ul li:hover {
 
 <script>
 export default {
+  data() {
+    return {
+      page: ''
+    }
+  },
+
   methods: {
     goToPage: function (page) {
       this.$emit("goToPage", page);
+      this.page = page;
     },
   },
 };
