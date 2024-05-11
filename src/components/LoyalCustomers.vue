@@ -34,11 +34,10 @@
                 <div>
                     <strong class="customer-name">{{ customer.name }}</strong>
                     <br>
-                    <small class="text-secondary">{{ customer.job }}</small>
+                    <small class="text-secondary">
+                        Email: {{ `${customer.email}@gmail.com` }}
+                    </small>
                 </div>
-            </div>
-            <div class="col-6 text-end my-3">
-                <a href="#" class="btn btn-sm btn-blue">See Info</a>
             </div>
         </div>
     </div>
@@ -50,32 +49,32 @@ const customers = [
     {
         id: 1,
         name: "Joe Vega",
-        job: "Entrepreneur"
+        email: "joevega"
     },
     {
         id: 2,
         name: "Maria Rose",
-        job: "Accounting Staff"
+        email: "mariarose"
     },
     {
         id: 3,
         name: "Rosemary Winters",
-        job: "Graphic Designer Freelance"
+        email: "rosemarywinters"
     },
     {
         id: 4,
         name: "Arno Dorian",
-        job: "Web Programmer"
+        email: "arnodorian"
     },
     {
         id: 5,
         name: "Amy Kuswanti",
-        job: "Social Media Strategies"
+        email: "amykuswanti"
     },
     {
         id: 6,
         name: "Robby Brave",
-        job: "Wordpress Developer"
+        email: "robbybrave"
     },
 ];
 export default {

@@ -13,7 +13,7 @@ body {
   <NavBar />
   <div class="row">
     <SideBar @goToPage="moveToPage" />
-    <HomePage v-if="page == ''" />
+    <HomePage @goToTransactions="moveToPage" v-if="page == ''" />
     <CarPage v-else-if="page == 'cars'" />
     <TransactionsPage v-else-if="page == 'transactions'" />
     <LoyalCustomers v-else-if="page == 'customers'" />

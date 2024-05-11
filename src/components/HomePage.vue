@@ -51,8 +51,12 @@ table th {
         <div class="bg-light rounded p-3 shadow">
           <div class="d-flex justify-content-between">
             <h6 class="fw-bold mb-4">Transactions</h6>
-            <a href="#" class="text-blue text-decoration-none">
-              All Transaction
+            <a 
+              href="#" 
+              class="text-blue text-decoration-none"
+              @click.prevent="goToTransactions('transactions')"
+            >
+              All Transactions
               <FontAwesomeIcon icon="fas fa-arrow-right" class="ms-1" />
             </a>
           </div>
@@ -187,7 +191,11 @@ table th {
             </div>
           </div>
           <div class="text-center mt-4 pt-2">
-            <a href="#" class="text-blue text-decoration-none">
+            <a 
+              href="#" 
+              class="text-blue text-decoration-none"
+              @click.prevent="goToTransactions('customers')"
+            >
               All Customers
               <FontAwesomeIcon icon="fas fa-arrow-right" class="ms-1" />
             </a>
@@ -198,4 +206,12 @@ table th {
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    goToTransactions: function (page) {
+      this.$emit("goToTransactions", page);
+    }
+  }
+}
+</script>

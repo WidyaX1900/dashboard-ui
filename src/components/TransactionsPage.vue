@@ -2,7 +2,55 @@
 
 <template>
   <div class="col-9 page-container">
-    <h5 class="fw-bold">Transactions</h5>
+    <div class="row col-11 ms-1 mb-2">
+      <div class="col-6">
+        <h5 class="fw-bold">Transactions</h5>
+      </div>
+      <div class="col-6 text-end">
+        <a  
+          href="#" 
+          class="text-decoration-none me-3" 
+          @click.prevent="getTrancsactionsByStatus()"
+        >
+          All
+        </a>
+        <a  
+          href="#" 
+          class="text-decoration-none me-3" 
+          @click.prevent="getTrancsactionsByStatus('SUCCESS')"
+        >
+          Success
+        </a>
+        <a  
+          href="#" 
+          class="text-decoration-none me-3" 
+          @click.prevent="getTrancsactionsByStatus('PENDING')"
+        >
+          Pending
+        </a>
+        <a  
+          href="#" 
+          class="text-decoration-none me-3" 
+          @click.prevent="getTrancsactionsByStatus('EXPIRED')"
+        >
+          Expired
+        </a>
+        <a  
+          href="#" 
+          class="text-decoration-none me-3" 
+          @click.prevent="getTrancsactionsByStatus('FAILED')"
+        >
+          Failed
+        </a>
+        <a  
+          href="#" 
+          class="text-decoration-none" 
+          @click.prevent="getTrancsactionsByStatus('CANCEL')"
+        >
+          Cancel
+        </a>
+      </div>
+    </div>
     <div class="ms-2 transaction-container">
       <div class="col-11 bg-light p-3 rounded shadow mb-3">
         <table class="transactions-list">
@@ -52,7 +100,7 @@
 </template>
 
 <script>
-const transactions = [
+const db = [
   {
     id: 1,
     carSeries: "Toyota Etios Valco",
@@ -80,7 +128,7 @@ const transactions = [
   {
     id: 4,
     carSeries: "Toyota Yaris",
-    photo: "etios-valco.jpg",
+    photo: "toyota-yaris.png",
     rentalDate: "May 9 2024, 15:25",
     payAmount: "250.000",
     status: "FAILED",
@@ -94,6 +142,8 @@ const transactions = [
     status: "CANCEL",
   },
 ];
+
+const transactions = db;
 
 export default {
   data() {
@@ -118,6 +168,16 @@ export default {
 
       return color;
     },
+
+    getTrancsactionsByStatus: function (status = '') {
+      if(status != '') {
+        this.transactions = db.filter(data => {
+          return data.status == status;
+        })        
+      } else {
+        this.transactions = db;
+      }
+    }
   },
 };
 </script>
