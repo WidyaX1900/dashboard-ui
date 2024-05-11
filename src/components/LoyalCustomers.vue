@@ -1,13 +1,13 @@
 <style>
 .btn-blue {
-    background: rgb(41, 148, 230);
+    background: rgb(41, 148, 230) !important;
     transition: background-color .3s;
-    color: white;
+    color: white !important;
 }
 
 .btn-blue:hover {
-    background: rgb(36, 123, 190);
-    color: white;
+    background: rgb(36, 123, 190) !important;
+    color: white !important;
 }
 
 .customer-name {
